@@ -1,0 +1,146 @@
+.header {
+
+    &__container {
+        padding: 14px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.04);
+
+    }
+
+    &__logo {
+        flex-shrink: 0;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+    }
+
+    &__nav-list {
+        margin: 0;
+        padding: 0;
+        margin-right: 17px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav-item + &__nav-item {
+        margin-left: 20px;
+    }
+
+    &__nav-link {
+        padding: 5px 2px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        color: #5D748A;
+    }
+
+    &__nav-link:hover {
+        border-bottom: 4px solid #FEA244;
+    }
+
+    &__nav-link:active {
+        opacity: 0.7;
+    }
+
+    &__nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__hamburger {
+        border: none;
+        background-color: transparent;
+        display: none;
+        width: 25px;
+        height: 18px;
+        background-image: url("../images/hamburger.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__nav-right-select {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+        margin-left: 6px;
+        font-size: 14px;
+        line-height: 17px;
+        color: #5D748A;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__nav-right-link {
+        padding: 8px 17px;
+        text-decoration: none;
+        background: #FFFFFF;
+        border-radius: 24px;
+        border: 2px solid #FEA244;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 17px;
+        color: #5D748A;
+    }
+
+    &__nav-right-link:hover {
+        background-color: #FEA244;
+        color: white;
+    }
+
+    &__nav-right-link:active {
+        opacity: 0.6;
+    }
+
+
+    &__nav-right-link-logo {
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width: 1286px) {
+    .header {
+        position: relative;
+
+        &__nav {
+            display: none;
+        }
+
+        &__hamburger {
+            margin-right: 25px;
+            display: inline-block;
+        }
+    }
+
+
+    .header--open .header__nav {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+    }
+
+    .header--open .header__nav-list {
+        margin: 0;
+        padding: 33px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header--open .header__hamburger {
+        margin-right: 12px;
+        background-image: url("../images/xmark-solid.svg");
+        width: 35px;
+        height: 25px;
+        color: #FEA244;
+    }
+}

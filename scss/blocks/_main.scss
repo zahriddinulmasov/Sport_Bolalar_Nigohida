@@ -1,0 +1,14 @@
+.main {
+    height: 1056px;
+    background-image: url("../images/Hero-font.png");
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+@media only screen and (max-width: 1024px) {
+    .main {
+        background-image: url("../images/hero-font-tablet.png");
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+}

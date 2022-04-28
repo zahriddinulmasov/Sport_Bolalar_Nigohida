@@ -1,0 +1,57 @@
+.hero {
+
+    &__container {
+        min-height: 938px;
+        position: relative;
+    }
+
+    &__general {
+        margin: 70px 0 52px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        margin-left: 100px;
+        max-width: 533px;
+    }
+
+    &__heading {
+        margin: 0;
+        margin-bottom: 64px;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 125.34%;
+        color: #5D748A;
+    }
+
+    &__right-img-src {
+        width: 500px;
+    }
+
+    &__line-img {
+        position: absolute;
+        right:40%;
+        bottom: 160px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero {
+
+        &__container {
+            min-height: 728px;
+        }
+
+        &__wrapper {
+            margin-top: 50px;
+            max-width: 364px;
+        }
+
+        &__heading {
+            margin-bottom: 40px;
+            font-size: 26px;
+        }
+    }
+}
